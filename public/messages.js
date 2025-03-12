@@ -17,7 +17,7 @@ const db = getFirestore(app);
 
 document.addEventListener('DOMContentLoaded', () => {
     const userId = localStorage.getItem('userId');
-    // Update the user ID display
+    // Update user ID display
     document.getElementById('loggedInUserId').textContent = userId;
 
     const messagesList = document.getElementById('messageList');

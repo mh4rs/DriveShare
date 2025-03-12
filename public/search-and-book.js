@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
  
 
  
-// Function to process payment upon button click
+// Function to process payment ons button click
     async function processPayment() {
     const bookingId = this.dataset.bookingId; // Retrieve bookingId stored in the dataset of the button
  

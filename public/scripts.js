@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const result = await response.json();
 
             if (response.ok) {
-                // Attempt to log in the user to establish a session
+                // log in the user to establish a session
                 const loginResponse = await fetch('/login', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData(loginForm);
         const formDataObj = Object.fromEntries(formData);
     
-// Attempt to send a POST request to the server-side login endpoint with the form data.
+// send a POST request to the server-side login endpoint with the form data.
 
         try {
             const response = await fetch('/login', {

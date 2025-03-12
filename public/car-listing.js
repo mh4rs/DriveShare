@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
    function handleError(message) {
        console.error("Error:", message);
-       // Log error message 
        alert(message); // Display the error message to the user via an alert
    }
    // Fetch and display cars

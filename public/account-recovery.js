@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let userEmail; // Store user email for password reset
 
 
-// Function to display messages on the UI
+// Function to display messages on UI 
     function displayMessage(message, isSuccess = false) {
         messageDisplay.textContent = message;
         messageDisplay.style.color = isSuccess ? 'green' : 'red';
