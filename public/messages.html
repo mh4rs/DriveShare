@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | DriveShare</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .notification-badge {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 0.7em;
+        }
+        .unread {
+            font-weight: bold;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manage Your Messages on DriveShare</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="list-car.html">Manage Listings</a></li>
+                <li><a href="search-and-book.html">Search and Book</a></li>
+                <li><a href="messages.html">Messages</a><span id="notificationBadge" class="notification-badge"></span></li>
+                <li><button id="logoutButton" class="logout-button">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="notification" style="display: none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background-color: #ffc107; color: black; padding: 10px; border-radius: 5px; z-index: 1000;">Notification area</div>
+        <section>
+            <h2>Send a Message</h2>
+            <p>Sending as: <span id="loggedInUserId"></span></p>
+            <form id="sendMessageForm">
+                <input type="text" name="to" placeholder="To User ID" required>
+                <textarea name="content" placeholder="Your message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <section>
+            <h2>Inbox</h2>
+            <ul id="messageList"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>DriveShare © 2024</p>
+    </footer>
+    <script type="module">
+        import { initializeApp, getApps } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js';
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyA9Rlo0O2BTIZZCtQTGAyhH1O9FMgBh50g",
+            authDomain: "driveshare-d6322.firebaseapp.com",
+            projectId: "driveshare-d6322",
+            storageBucket: "driveshare-d6322.appspot.com",
+            messagingSenderId: "383014765071",
+            appId: "1:383014765071:web:fa2c205539ed25fc43d97a",
+            measurementId: "G-F45ZS0WY4Y"
+        };
+
+        // Initialize Firebase only if no apps are already initialized
+        let app;
+        if (!getApps().length) {
+            app = initializeApp(firebaseConfig);
+        } else {
+            app = getApps()[0]; 
+        }
+        const db = getFirestore(app);
+
+        import './messages.js';
+    </script>
+</body>
+</html>

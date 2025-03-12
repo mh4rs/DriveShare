@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveShare - Search and Book Cars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Search and Book Your Car on DriveShare</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search-and-book.html" class="active">Search and Book</a></li>
+                <li><a href="recover-account.html">Recover Account</a></li>
+                <li><a href="messages.html">Messages</a></li>
+               <li><button id="logoutButton" class="logout-button">Logout</button></li> 
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="search-section">
+            <h2>Search Cars</h2>
+            <form id="search-form">
+                <input type="text" name="location" placeholder="Location" required>
+                <input type="date" name="startDate" placeholder="Start Date" required>
+                <input type="date" name="endDate" placeholder="End Date" required>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        <section id="search-results-section">
+            <h2>Search Results</h2>
+            
+            <ul id="search-results">
+              
+            </ul>
+        </section>
+        <section id="booking-section">
+            <h2>Book Car</h2>
+            <form id="book-form" class="hidden">
+                <input type="hidden" name="carId" id="book-carId">
+                <input type="date" name="startDate" placeholder="Start Date" required>
+                <input type="date" name="endDate" placeholder="End Date" required>
+                <button type="submit">Book Now</button>
+            </form>
+            <div id="booking-message" class="hidden"></div> 
+            <button id="payment-button" class="hidden">Proceed to Payment</button>
+        </section>
+    </main>
+    <footer>
+        <p>DriveShare © 2024</p>
+    </footer>
+
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <script src="firebaseInit.js"></script>
+    <script src="search-and-book.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveShare - Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>DriveShare</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recover-account.html">Recover Account</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="registration-section">
+            <h2>Register for DriveShare</h2>
+            <form id="registration-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                
+                <div class="security-questions">
+                    <label for="answer1">What city were you born in?</label>
+                    <input type="text" id="answer1" name="answer1" placeholder="Your answer" required />
+                    
+                    <label for="answer2">What is the name of your favorite pet?</label>
+                    <input type="text" id="answer2" name="answer2" placeholder="Your answer" required />
+                    
+                    <label for="answer3">What high school did you attend?</label>
+                    <input type="text" id="answer3" name="answer3" placeholder="Your answer" required />
+                </div>
+                
+                <div class="user-role">
+                    <label for="role">Register as:</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select your role</option>
+                        <option value="owner">Car Owner</option>
+                        <option value="renter">Renter</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Register</button>
+            </form>
+            <div id="message-box"></div>
+        </section>
+    </main>
+    <footer>
+        <p>DriveShare © 2024</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveShare - Recover Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recover Your Account</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recover-account.html">Recover Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="account-recovery-section">
+            <h2>Account Recovery</h2>
+            <p>Enter your email address below and click "Start Recovery" to begin the account recovery process. Follow the instructions that appear to verify your identity.</p>
+            <form id="recovery-form">
+                <label for="recovery-email">Email:</label>
+                <input type="email" id="recovery-email" name="email" required>
+                <button type="button" id="start-recovery-btn">Start Recovery</button>
+            </form>
+            <div id="recovery-questions" style="display:none;">
+                <p id="recovery-question"></p>
+                <input type="text" id="recovery-answer" placeholder="Your answer">
+                <button type="button" id="submit-answer-btn">Submit Answer</button>
+            </div>
+            <div id="password-reset-form" style="display:none;">
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="newPassword" required>
+                <button type="button" id="reset-password-btn">Reset Password</button>
+            </div>
+            <div id="recovery-message"></div>
+        </section>
+    </main>
+    <footer>
+        <p>DriveShare © 2024</p>
+    </footer>
+    <script src="account-recovery.js"></script>
+</body>
+</html>

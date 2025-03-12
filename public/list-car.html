@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DriveShare - Manage Your Listings</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header>
+       <h1>Manage Your Car Listings on DriveShare</h1>
+       <nav>
+           <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="list-car.html" class="active">Manage Listings</a></li>
+               <li><a href="search-and-book.html">Search and Book</a></li>
+               <li><a href="messages.html">Messages</a></li>
+               <li><button id="logoutButton" class="logout-button">Logout</button></li> 
+
+           </ul>
+       </nav>
+   </header>
+   <main>
+       <section>
+           <h2>Add a New Car</h2>
+           <form id="car-form">
+               <input type="text" name="model" placeholder="Car Model" required>
+               <input type="number" name="year" placeholder="Year of Manufacture" required>
+               <input type="number" name="mileage" placeholder="Mileage" required>
+               <input type="text" name="location" placeholder="Location" required>
+               <input type="number" name="price" placeholder="Price" required>
+               <input type="date" name="availableFrom" placeholder="Available From" required>
+               <input type="date" name="availableUntil" placeholder="Available Until" required>
+               <select name="availability" required>
+                   <option value="">Select Availability</option>
+                   <option value="Available">Available</option>
+                   <option value="Unavailable">Unavailable</option>
+               </select>
+               <button type="submit">List Car</button>
+           </form>
+       </section>
+       <section id="update-car-section">
+           <h2>Update Car</h2>
+           <form id="update-car-form"> 
+               <input type="hidden" id="update-id" name="id">
+               <input type="text" id="update-model" name="model" placeholder="Car Model" required>
+               <input type="number" id="update-year" name="year" placeholder="Year of Manufacture" required>
+               <input type="number" id="update-mileage" name="mileage" placeholder="Mileage" required>
+               <input type="text" id="update-location" name="location" placeholder="Location" required>
+               <input type="number" id="update-price" name="price" placeholder="Price" required>
+               <input type="date" id="update-availableFrom" name="availableFrom" placeholder="Available From" required>
+               <input type="date" id="update-availableUntil" name="availableUntil" placeholder="Available Until" required>
+               <select id="update-availability" name="availability" required>
+                   <option value="Available">Available</option>
+                   <option value="Unavailable">Unavailable</option>
+               </select>
+               <button type="submit">Update Car</button>
+
+           </form>
+       </section>
+       <section>
+           <h2>Your Listed Cars</h2>
+           <ul id="car-list">
+           </ul>
+       </section>
+   </main>
+   <footer>
+       <p>DriveShare © 2024</p>
+   </footer>
+   <script src="car-listing.js"></script>
+
+</body>
+</html>
