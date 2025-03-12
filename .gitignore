@@ -9,6 +9,5 @@ logs/
 .vscode/
 .idea/
 dist/
-package-lock.json
 public/firebaseInit.js
 firebaseAdmin.js
